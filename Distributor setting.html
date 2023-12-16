@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html
+ 
+lang="en">
+
+<head>
+
+  
+<meta
+ 
+charset="UTF-8">
+
+  
+<meta
+ 
+name="viewport"
+ 
+content="width=device-width, initial-scale=1.0">
+
+  
+<title>Settings Page</title>
+  <link rel="stylesheet" href="Distributor setting.css">
+</head>
+<body>
+  <div class="settings-container">
+    <h1>Settings</h1>
+
+    <ul class="settings-list">
+      <li>
+        <a href="#account">Account</a>
+      </li>
+      <li>
+        <a href="#notifications">Notifications</a>
+      </li>
+      <li>
+        <a href="#privacy">Privacy</a>
+      </li>
+    </ul>
+
+    <div class="settings-content">
+      <div id="account" class="settings-tab">
+        <h2>Account Settings</h2>
+        <p>Manage your account settings, such as profile information and password.</p>
+        <form action="">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" value="johndoe@example.com">
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+
+          <button type="submit">Save Changes</button>
+        </form>
+      </div>
+
+      <div id="notifications" class="settings-tab">
+        <h2>Notification Settings</h2>
+        <p>Control which notifications you receive from the app.</p>
+        <div class="notification-setting">
+          <label for="emailNotifications">Email Notifications:</label>
+          <input type="checkbox" id="emailNotifications" name="emailNotifications" checked>
+        </div>
+        <div class="notification-setting">
+          <label for="pushNotifications">Push Notifications:</label>
+          <input type="checkbox" id="pushNotifications" name="pushNotifications">
+        </div>
+      </div>
+
+      <div id="privacy" class="settings-tab">
+        <h2>Privacy Settings</h2>
+        <p>Manage your privacy settings, such as who can see your profile information.</p>
+        <div class="privacy-setting">
+          <label for="profileVisibility">Profile Visibility:</label>
+          <select id="profileVisibility" name="profileVisibility">
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+          </select>
+        </div>
+        <div class="privacy-setting">
+          <label for="dataSharing">Data Sharing:</label>
+          <input type="checkbox" id="dataSharing" name="dataSharing">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+.settings-container {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .settings-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .settings-list li {
+    margin-bottom: 10px;
+  }
+  
+  .settings-list a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .settings-content {
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .settings-tab {
+    display: none;
+  }
+  
+  .settings-tab.active {
+    display: block;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
