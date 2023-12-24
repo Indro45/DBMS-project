@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quality Controller Dashboard</title>
+  <link rel="stylesheet" href="QualityControllerstyles (1).css">
+ 
+</head>
+<body>
+  <header>
+    <h1>Quality Controller Dashboard</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact Us</a>
+  </nav>
+
+  <div class="dashboard-container">
+    <div class="sidebar">
+      <h2 style="color: rgb(20, 255, 94); text-align: center; ">Nohori Jobaida</h2>
+      <h2>Dashboard</h2>
+      <h2>Profile</h2>
+      
+    </div>
+
+    <div class="main-content">
+      <div class="section">
+        <h2>Incoming Data</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Product</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody id="incomingDataBody">
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2>Processed Data</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Product</th>
+              <th>Quality Status</th>
+            </tr>
+          </thead>
+          <tbody id="processedDataBody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Dummy data for illustration
+    const incomingData = [
+      { date: '2023-11-01', product: 'Rice', quantity: 1000 },
+      { date: '2023-11-02', product: 'Wheat', quantity: 800 },
+      { date: '2023-12-03', product: 'Potatoes', quantity: 500 },
+      { date: '2023-12-04', product: 'Carrots', quantity: 300 },
+    
+      // Add more data as needed
+    ];
+
+    const processedData = [
+      { date: '2023-11-01', product: 'Rice', qualityStatus: 'Pass' },
+      { date: '2023-11-02', product: 'Wheat', qualityStatus: 'Fail' },
+      { date: '2023-12-03', product: 'Potatoes', qualityStatus: 'Pass' },
+      { date: '2023-12-04', product: 'Carrots', qualityStatus: 'Pass' },
+
+    // Add more data as needed
+    ];
+
+    function populateTable(tableBody, data) {
+      const body = document.getElementById(tableBody);
+      body.innerHTML = '';
+
+      data.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${item.date}</td><td>${item.product}</td><td>${item.quantity || item.qualityStatus}</td>`;
+        body.appendChild(row);
+      });
+    }
+
+    populateTable('incomingDataBody', incomingData);
+    populateTable('processedDataBody', processedData);
+  </script>
+</body>
+</html>
